@@ -11,3 +11,92 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.line {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #4b9cdb;
+}
+
+.loading-wrap {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 200px;
+  left: 0;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  padding: 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.loading .line {
+  margin: 0 5px;
+}
+
+.loading .line:nth-last-child(1) {
+  animation: loadingC 0.6s 0.1s linear infinite;
+}
+.loading .line:nth-last-child(2) {
+  animation: loadingC 0.6s 0.2s linear infinite;
+}
+.loading .line:nth-last-child(3) {
+  animation: loadingC 0.6s 0.3s linear infinite;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes loadingC {
+0 {
+  transform: translate(0, 0);
+}
+50% {
+  transform: translate(0, 15px);
+}
+100% {
+  transform: translate(0, 0);
+}
+}
+
+table{
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+tr {
+  width: 100%;
+}
+
+td, th{
+  text-align: center;
+  border:1px solid #ACBED1;
+  padding: 5px;
+}
+
+.th1 {
+  width: 200px;
+}
+
+.td1 {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+
+td span {
+  border: 1px solid #4b9cdb;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
